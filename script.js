@@ -85,6 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
   otherProfiles.forEach((card) => {
     const name = card.querySelector('h3').textContent.trim();
     const role = card.querySelector('.member-info p').textContent.trim();
+    if (name.toUpperCase() === 'RISHIKANTH') {
+      card.querySelector('img').src = 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80';
+    }
     if (name.toUpperCase() === 'SHYAM') card.classList.add('shyam-card');
     card.tabIndex = 0;
     card.setAttribute('role', 'button');
